@@ -110,7 +110,19 @@
     <p>
         Interested in working with us? Contact us today.
     </p>
-    <button class="primary-btn">Contact Us</button>
+    
+    <form class="contact-form" action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="message">Message</label>
+        <textarea type="message" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit" class="primary-btn">Submit Message</button>
+    </form>
 </section>
 
 <script src="script.js"></script>
