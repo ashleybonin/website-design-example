@@ -23,7 +23,7 @@ This project demonstrates my ability to design and build a business website with
 - User interface structuring   
 - Website navigation and scrolling effects  
 
-## Technologies Used
+## Built With
 - HTML  
 - CSS  
 - JavaScript  
