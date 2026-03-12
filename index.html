@@ -79,7 +79,7 @@
         <p>
             Advanced data analytics platform.
         </p>
-        <a href="#">Visit Brand</a>
+        <a href="#">Learn More</a>
     </div>
 
     <div class="brand-card">
@@ -88,7 +88,7 @@
         <p>
             E-commerce platform.
         </p>
-        <a href="#">Visit Brand</a>
+        <a href="#">Learn More</a>
     </div>
 
     <div class="brand-card">
@@ -97,7 +97,7 @@
         <p>
             Creative digital media marketing.
         </p>
-        <a href="#">Visit Brand</a>
+        <a href="#">Learn More</a>
     </div>
 
     </div>
@@ -111,7 +111,7 @@
         Interested in working with us? Contact us today.
     </p>
     
-    <form class="contact-form" action="#" method="POST">
+    <form id="contactForm" class="contact-form" action="#" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your full name" required>
 
@@ -119,9 +119,12 @@
         <input type="email" id="email" name="email" placeholder="Your email address" required>
 
         <label for="message">Message</label>
-        <textarea type="message" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
 
         <button type="submit" class="primary-btn">Submit Message</button>
+
+        <p id="formWarning" style="color: red; display: none;">Please fill out all required fields.</p>
+        <p id="formSuccess" style="color: green; display: none;">Message sent successfully!</p>
     </form>
 </section>
 
