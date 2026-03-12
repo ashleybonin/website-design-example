@@ -1,7 +1,7 @@
 /* variables */
 :root {
     --primary-color: #1e3a8a;
-    --secondary-color: #6366f1;
+    --secondary-color: #63d5f1;
     --ascent-color: #ffffff;
 
     --text-color: #333;
@@ -12,7 +12,7 @@
     --shadow-hover: 0 10px 25px rgba(0,0,0,0.15);
     --transition-speed: 0.3s
     --max-width: 1200px;
-    --font-family: Arial, Helvetica, sans-serif;
+    --font-family: Helvetica, sans-serif;
 }
 
 /* global styles */
@@ -34,8 +34,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background: white;
+    padding: 20px 5%;
+    background: rgb(17, 19, 73);
     box-shadow: var(--shadow-light);
     position: sticky;
     top: 0;
@@ -43,10 +43,21 @@ nav {
 }
 
 .logo {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Copperplate", "Copperplate Gothic Light", serif;
+    font-size: 25px;
     font-weight: bold;
 
-    color: var(--primary-color);
+    color: var(--ascent-color);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    filter: invert(1);
 }
 
 .nav-links {
@@ -57,13 +68,14 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--ascent-color);
     font-weight: 500;
     transition: color var(--transition-speed);
 }
 
 .nav-links a:hover {
     color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 /* hero section */
@@ -72,7 +84,9 @@ nav {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("images/Mountain_city.jpg");
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
     padding: 20px;
@@ -97,7 +111,7 @@ nav {
 .primary-btn {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background: var(--accent-color);
+    background:rgba(255, 255, 255, 0.85);
     color: var(--primary-color);
     padding: 12px 28px;
     border: none;
@@ -116,33 +130,71 @@ nav {
 /* about section */
 
 .about {
-    padding: var(--section-padding);
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
     text-align: center;
+}
+
+.about-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1100px;
+    padding: 60px 20px;
 }
 
 .about h2 {
     font-size: 32px;
     margin-bottom: 20px;
     color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
 }
 
-.about p {
-    max-width: 700px;
-    margin: auto;
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin-top: 40px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 60px;
+}
+
+.about-container img {
+    width: 400px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.about-container p {
+    max-width: 800px;
+    text-align: left;
     font-size: 18px;
+    line-height: 1.7;
 }
 
 /* brands section */
 .brands {
-    padding: var(--section-padding);
+    padding: 40px;
     background: var(--light-background);
     text-align: center;
 }
 
 .brands h2 {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
 }
 
 .brand-grid {
@@ -155,7 +207,7 @@ nav {
 
 .brand-card {
     background: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
     transition: transform var(--transition-speed),
@@ -179,13 +231,13 @@ nav {
 
 .brand-card a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
 /* contact section */
 .contact {
-    padding: var(--section-padding);
+    padding: 40px;
     text-align: center;
 }
 
@@ -193,6 +245,8 @@ nav {
     font-size: 32px;
     margin-bottom: 20px;
     color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
 }
 
 .contact p {
@@ -215,7 +269,24 @@ nav {
         font-size: 14px;
     }
 
-    .about p {
+    .about-container {
         font-size: 16px;
+        flex-direction: column;
+        text-align: center;
     }
+
+    .about-container img {
+        width: 80%;
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
