@@ -13,12 +13,15 @@
 
 <!--nav-->
 <nav>
-    <div class="logo">Rocky Mountain Ventures</div>
+    <div class="logo">
+        <img src="images/mountain-logo.png" alt="Rocky Mountain Ventures Logo">
+        <span>Rocky Mountain Ventures</span>
+    </div>
 
     <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#brands">Our Work</a></li>
+        <li><a href="#contact">Contact Us</a></li>
     </ul>
 </nav>
 
@@ -28,7 +31,7 @@
 <div class="hero-content">
     <h1>Building Innovative Brands</h1>
     <p>
-        Rocky Mountain Ventures partners will and grows 
+        Rocky Mountain Ventures partners with and grows 
         companies across technology, commerce, and digital media.
     </p>
     <a href="#brands" class="primary-btn">Explore Our Brands</a>
@@ -38,43 +41,72 @@
 
 <!--about-->
 <section id="about" class="about">
+    <div class="about-title">
+        <h2>About Us</h2>
+    </div>
 
-    <h2>About Us</h2>
-    <p>
-        Rocky Mountain Ventures is a holding company focused on
-        building and scaling modern digital businesses.
-    </p>
+    <div class="about-container">
+
+        <img src="images/company-team.jpg" alt="Rocky Mountain Ventures Team">
+
+        <div class="about-text">
+            <p>
+                Rocky Mountain Ventures is a holding company focused on building
+                and supporting innovative digital businesses. We partner with founders and
+                emerging companies to help them scale through strategic guidance, technology,
+                and operational expertise.
+            </p>
+            <br>
+            <p>
+                Our portfolio spans industries including data analytics, e-commerce, and
+                digital media. By combining strong technical foundations with thoughtful
+                design and user-focused products, we aim to create companies that deliver                    lasting value for customers and meaningful growth for partners.
+            </p>
+        </div>
+    </div>
 
 </section>
 
 <!--brands-->
 <section id="brands" class="brands">
 
-    <h2>Our Portfolio</h2>
+    <h2>Our Work</h2>
     <div class="brand-grid">
 
     <div class="brand-card">
         <h3>Peak Analytics</h3>
+        <img src="images/analytics.jpg" alt="Peak Analytics" class="brand-img">
         <p>
-            Advanced data analytics platform.
+            Rocky Mountain Ventures partnered with Peak Analytics to build a modern
+            data intelligence platform. With our technical and strategic support,
+            the company <strong>expanded its customer base by 150%</strong> and now processes
+            millions of data points daily for growing organizations.    
         </p>
-        <a href="#">Visit Brand</a>
+        <a href="#">Learn More</a>
     </div>
 
     <div class="brand-card">
         <h3>Alpine Commerce</h3>
+        <img src="images/commerce.jpg" alt="Alpine Commerce" class="brand-img">
         <p>
-            E-commerce platform.
+            Through Alpine Commerce, Rocky Mountain Ventures helps businesses launch
+            and scale online stores. By providing platform development and growth
+            strategy, we helped <strong>increase partner sales by over 200%</strong> within the
+            first two years.
         </p>
-        <a href="#">Visit Brand</a>
+        <a href="#">Learn More</a>
     </div>
 
     <div class="brand-card">
         <h3>Summit Media</h3>
+        <img src="images/media.jpg" alt="Summit Media" class="brand-img">
         <p>
-            Creative digital media marketing.
+            Rocky Mountain Ventures supported Summit Media in building a creative
+            digital marketing studio focused on brand storytelling and growth.
+            Our partnership helped clients <strong>expand their digital reach by more
+            than 3×</strong> across multiple platforms.
         </p>
-        <a href="#">Visit Brand</a>
+        <a href="#">Learn More</a>
     </div>
 
     </div>
@@ -87,8 +119,23 @@
     <p>
         Interested in working with us? Contact us today.
     </p>
-    <button class="primary-btn">Contact Us</button>
+    
+    <form id="contactForm" class="contact-form" action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit" class="primary-btn">Submit Message</button>
+
+    </form>
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>

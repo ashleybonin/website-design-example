@@ -1,0 +1,355 @@
+/* variables */
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #63d5f1;
+    --ascent-color: #ffffff;
+
+    --text-color: #333;
+    --light-background: #f7f7f7;
+
+    --border-radius: 12px;
+    --shadow-light: 0 5px 15px rgba(0,0,0,0.08);
+    --shadow-hover: 0 10px 25px rgba(0,0,0,0.15);
+    --transition-speed: 0.3s
+    --max-width: 1200px;
+    --font-family: Helvetica, sans-serif;
+}
+
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background: white;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgb(17, 19, 73);
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Copperplate", "Copperplate Gothic Light", serif;
+    font-size: 25px;
+    font-weight: bold;
+
+    color: var(--ascent-color);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    filter: invert(1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--ascent-color);
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("images/Mountain_city.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+/* button */
+
+.primary-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background:rgba(255, 255, 255, 0.85);
+    color: var(--primary-color);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* about section */
+
+#about, #brands, #contact {
+    scroll-margin-top: 80px;
+}
+
+.about {
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.about-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1100px;
+    padding: 20px 20px;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin-top: 40px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 60px;
+}
+
+.about-container img {
+    width: 400px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.about-container p {
+    max-width: 800px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* brands section */
+.brands {
+    padding: 40px;
+    background: var(--light-background);
+    text-align: center;
+}
+
+.brands h2 {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.brand-card .brand-img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 10px auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.brand-card {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+.brand-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.brand-card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.brand-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.brand-card a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* contact section */
+.contact {
+    padding: 40px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.contact-form button {
+    width: fit-content;
+    align-self: flex-start;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: var(--secondary-color);
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .about-container {
+        font-size: 16px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        width: 80%;
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
